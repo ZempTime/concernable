@@ -1,0 +1,4 @@
+<nav class="navigation">
+  <%= link_to "Concernable", root_path, class: "navigation__brand" %>
+  <%= link_to "Posts", posts_path, class: "navigation__section #{'is_active' if params[:controller] == "posts"}" %>
+</nav>
