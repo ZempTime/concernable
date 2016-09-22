@@ -1,3 +1,5 @@
 <%= link_to "back", root_path %>
 <br />
 <%= @post.name %>
+
+<%= render partial: "list", locals: { posts: @post.nested_items.ordered } %>

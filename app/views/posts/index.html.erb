@@ -1,9 +1,5 @@
 <h1>Posts</h1>
 
-<ul data-behavior="orderable" data-order-url="<%= order_posts_path %>">
-<% @posts.each do |post| %>
-  <li id="post_<%= post.id %>"> <%= link_to post.name, post %></li>
-<% end %>
-</ul>
+<%= render partial: "list", locals: { posts: @posts } %>
 
 <%= link_to "+ Add Post", new_post_path %>
