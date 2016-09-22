@@ -1,3 +1,7 @@
 <%= link_to "<- back", root_path %>
+
 <h1>Viewing <%= @post.name %></h1>
-<%= render partial: "cards", locals: { posts: @post.nested_items.ordered } %>
+
+<div class="card-grid" data-behavior="sortable-cards" data-order-url="<%= order_posts_path %>">
+  <%= render partial: "card", collection: @post.nested_items.ordered, as: :post %>
+</ul>

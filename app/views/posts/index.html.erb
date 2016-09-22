@@ -1,5 +1,9 @@
 <h1>Posts</h1>
 
-<%= render partial: "cards", locals: { posts: @posts } %>
+<div>
+  <%= link_to "+ Add Post", new_post_path %>
+</div>
 
-<%= link_to "+ Add Post", new_post_path %>
+<div class="card-grid" data-behavior="sortable-cards" data-order-url="<%= order_posts_path %>">
+  <%= render partial: "card", collection: @posts, as: :post %>
+</ul>

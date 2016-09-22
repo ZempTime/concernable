@@ -25,5 +25,6 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
-gem 'bourbon', '~> 4.2', '>= 4.2.7'
+gem 'bourbon'
 gem 'neat', '~> 1.8'
+gem 'bitters', '~> 1.4'

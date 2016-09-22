@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     @post = Post.new post_params
 
     if @post.save
-      redirect_to @post
+      redirect_to posts_path
     else
       render "new"
     end
@@ -34,7 +34,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.save post_params
-      redirect_to @post
+      redirect_to posts_path
     else
       render "edit"
     end

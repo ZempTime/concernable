@@ -1,14 +1,15 @@
-<h3>New Post</h3>
+<div class="column">
+  <h3>New Post</h3>
+  <%= form_for @post do |f| %>
+    <% if @post.errors.any? %>
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
 
-<%= form_for @post do |f| %>
-  <% if @post.errors.any? %>
-    <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
+    <%= f.text_field :name %>
+    <%= f.submit %>
   <% end %>
-
-  <%= f.text_field :name %>
-  <%= f.submit %>
-<% end %>
+</div>
