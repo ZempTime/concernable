@@ -1,5 +1,11 @@
-<div class="card" id="post_<%= post.id %>">
+<div class="card" id="post_<%= post.id %>" data-behavior="fileable" data-filing-id="<%= post.id %>" data-filing-url="<%= file_post_path(post) %>">
   <%= link_to post do %>
     <p class="card__title"><%= post.name %></p>
+
+    <ul class="card__filed-items">
+      <% post.nested_items.limit(4).each do |post| %>
+        <li><%= post.name %></li>
+      <% end %>
+    </ul>
   <% end %>
 </div>

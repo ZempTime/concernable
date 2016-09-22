@@ -1,0 +1,2 @@
+$("#post_<%= @target_post.id %>").remove();
+$("#post_<%= @post.id %>").html("").html('<%= j render partial: "posts/card", locals: {post: @post } %>');

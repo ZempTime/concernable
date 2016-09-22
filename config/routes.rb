@@ -3,6 +3,10 @@ Rails.application.routes.draw do
     collection do
       post :order
     end
+
+    member do
+      post :file, controller: "posts/filings"
+    end
   end
 
   root to: "posts#index"
