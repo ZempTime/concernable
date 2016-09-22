@@ -1,0 +1,17 @@
+.card-grid {
+  @include outer-container;
+}
+
+.card {
+  @include span-columns(3);
+  @include omega(4n);
+  border-radius: 5px;
+  height: 8em;
+  background-color: $brown;
+}
+
+.card__title {
+  color: $teal;
+  text-decoration: none;
+  text-align: center;
+}
