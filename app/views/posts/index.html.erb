@@ -1,8 +1,8 @@
 <h1>Posts</h1>
 
-<ul>
+<ul data-behavior="orderable" data-order-url="<%= order_posts_path %>">
 <% @posts.each do |post| %>
-  <li> <%= link_to post.name, post %></li>
+  <li id="post_<%= post.id %>"> <%= link_to post.name, post %></li>
 <% end %>
 </ul>
 

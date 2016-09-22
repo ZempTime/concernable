@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.ordered
   end
 
   def show
@@ -41,6 +41,12 @@ class PostsController < ApplicationController
   end
 
   def destroy
+  end
+
+  def order
+    params[:post].each_with_index do |id, index|
+      Post.find(id).update(position: index)
+    end
   end
 
   private
