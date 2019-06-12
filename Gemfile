@@ -24,7 +24,7 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.0'
 gem 'bourbon'
 gem 'neat', '~> 1.8'
 gem 'bitters', '~> 1.4'
